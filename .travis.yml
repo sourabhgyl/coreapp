@@ -3,6 +3,9 @@ mono: none
 dotnet: 5.0
 services:
   - docker
-script:
- - dotnet publish
- - docker build -t sgcoreapp .
+  
+deploy:
+  - provider: script
+    script: travis/deploy.sh
+    on:
+      branch: master
