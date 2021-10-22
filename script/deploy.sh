@@ -29,6 +29,6 @@ gcloud --quiet config set compute/zone us-central1-c
 gcloud --quiet container clusters get-credentials sgdevops
 
 
-gcloud --quiet docker -- push us-central1-docker.pkg.dev/myproject2-328914/sggcr/sgcoreapp:v1
+gcloud --quiet docker -- push sgcoreapp gcr.io/myproject2-328914/sgcoreapp
 
 #kubectl set image deployment/${DEPLOYMENT_NAME} ${CONTAINER_NAME}=gcr.io/${PROJECT_ID}/${APP_NAME}:${TRAVIS_COMMIT}
