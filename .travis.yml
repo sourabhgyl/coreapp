@@ -3,9 +3,9 @@ mono: none
 dotnet: 5.0
 services:
   - docker
-  
+
 deploy:
   - provider: script
-    script: travis/deploy.sh
+    script: Travis/deploy.sh
     on:
       branch: master
