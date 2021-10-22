@@ -12,7 +12,7 @@ dotnet publish
 
 echo "building docker image - start"
 docker build -t sgcoreapp .
-docker tag sgcoreapp gcr.io/myproject2-328914/sgcoreapp
+docker tag sgcoreapp gcr.io/myproject2-328914/sgcoreapp:v3
 echo "building docker image - start"
 
 echo "getting gcloud sdk"
@@ -29,6 +29,6 @@ gcloud --quiet config set compute/zone us-central1-c
 gcloud --quiet container clusters get-credentials sgdevops
 
 
-gcloud docker -- push  gcr.io/myproject2-328914/sgcoreapp
+gcloud docker -- push  gcr.io/myproject2-328914/sgcoreapp:v3
 
 kubectl apply -f ./depdir
