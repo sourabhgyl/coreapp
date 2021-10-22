@@ -6,6 +6,10 @@ if [ -z "$TRAVIS" ]; then
 	echo "This script must be executed from Travis only !"
 	exit 1
 fi
+echo "dotnet build"
+
+dotnet publish
+
 echo "building docker image - start"
 docker build -t sgcoreapp .
 docker tag sgcoreapp us-central1-docker.pkg.dev/myproject2-328914/sggcr/sgcoreapp:v1
