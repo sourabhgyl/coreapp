@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "script started"
 set -ex
 
 if [ -z "$TRAVIS" ]; then
