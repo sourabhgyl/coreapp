@@ -31,4 +31,4 @@ gcloud --quiet container clusters get-credentials sgdevops
 
 gcloud docker -- push  gcr.io/myproject2-328914/sgcoreapp
 
-#kubectl set image deployment/${DEPLOYMENT_NAME} ${CONTAINER_NAME}=gcr.io/${PROJECT_ID}/${APP_NAME}:${TRAVIS_COMMIT}
+kubectl run sgcoreapp gcr.io/myproject2-328914/sgcoreapp
