@@ -4,6 +4,9 @@ dotnet: 5.0
 services:
   - docker
 
+script:
+  - echo "test script"
+
 deploy:
   - provider: script
     script: Travis/deploy.sh
