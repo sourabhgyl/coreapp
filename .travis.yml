@@ -8,7 +8,8 @@ script:
   - echo "test script"
 
 deploy:
-  - provider: script
-    script: Travis/deploy.sh
-    on:
+  skip_cleanup: true
+  provider: script
+  script: travis/deploy.sh
+  on:
       branch: master
