@@ -31,4 +31,4 @@ gcloud --quiet container clusters get-credentials sgdevops
 
 gcloud docker -- push  gcr.io/myproject2-328914/sgcoreapp
 
-kubectl run sgcoreapp gcr.io/myproject2-328914/sgcoreapp
+kubectl apply -f ./depdir

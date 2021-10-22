@@ -1,0 +1,17 @@
+kind:apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sgcoreapp
+spec:
+  selector:
+    matchLabels:
+      app: sgcoreapp
+  template:
+    metadata:
+      labels:
+        app: sgcoreapp
+    spec:
+      containers:
+      - name: sgcoreapp
+        image: gcr.io/myproject2-328914/sgcoreapp
+
